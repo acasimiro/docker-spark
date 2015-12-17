@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-docker pull epahomov/docker-spark
-docker run -i -t -P --link spark_master:spark_master epahomov/docker-spark /spark-shell.sh "$@"
+docker exec -it spark_master /$1-shell.sh
